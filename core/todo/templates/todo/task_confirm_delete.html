@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Todo Delete {% endblock %}
+{% block extra_css %}{% endblock %}
+{% block content %}
+<form method="post" class="text-center p-4 border rounded shadow-sm bg-light">
+    {% csrf_token %}
+    <h5 class="mb-3">Are you sure you want to delete <strong>"{{ task }}"</strong>?</h5>
+
+    <div class="d-flex justify-content-center gap-2">
+        <button type="submit" class="btn btn-danger px-4">Yes, Delete</button>
+        <a href="{% url 'todo:task_list' %}" class="btn btn-secondary px-4">Cancel</a>
+    </div>
+</form>
+{% endblock %}
