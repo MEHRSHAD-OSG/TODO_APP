@@ -135,6 +135,7 @@ REST_FRAMEWORK = {
     # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "DEFAULT_AUTHENTICATION_CLASSES": [
         "rest_framework.authentication.TokenAuthentication",  # accounts/api/v1
+        "rest_framework.authentication.SessionAuthentication",
         # "accounts.api.v2.authentication.CustomJWTAuthentication",  # accounts/api/v2
     ],
 }
